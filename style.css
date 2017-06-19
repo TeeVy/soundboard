@@ -1,0 +1,218 @@
+html, body, #page-content-wrapper, #wrapper {
+	height: 100%;
+	background-color: #f5f5f6;
+}
+
+/* LOADER */
+.loader {
+	/*background: url('/ajax-loader.gif') 50% 50% no-repeat #f5f5f6;*/
+    background: 50% 50% no-repeat #f5f5f6;
+	cursor: wait;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.loader h1 {
+	background: none;
+	border: none;
+	font-size: 22px;
+	font-variant: small-caps;
+	height: 700px;
+	line-height: 700px;
+	margin: 0 0 10px;
+	padding: 0;
+	text-align: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/* OTHER STUFF */
+.content {
+	visibility: hidden;
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled .content {
+	visibility: visible;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.navbar-inverse {
+	background-color: #102027;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.navbar-inverse .navbar-brand,  {
+	color: #b0bec5;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+.btn-menu, .btn-menu:hover, .btn-menu:active, .btn-menu:focus {
+	float: left;
+	margin-left: 15px;
+	border-radius: 0;
+	background-color: transparent;
+	color: #b0bec5;
+	box-shadow: none; 
+}
+#wrapper.toggled .btn-menu {
+	color: #fff;
+}
+.navbar>.container-fluid .navbar-brand {
+	margin-left: 0;
+}
+.margin-40 {
+	margin-top: 40px;
+}
+.padding-top {
+	padding: 10px 0;
+}
+.btn-90 {
+	width: 90%;
+	height: 64px;
+	white-space: normal;
+}
+/* SIDEBAR */
+#wrapper {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #37474f;
+    box-shadow: 1px 0 3px rgba(0,0,0,0.12), 1px 0 2px rgba(0,0,0,0.24);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    left: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #b0bec5;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li a.active, .sidebar-nav li a:active {
+    text-decoration: none;
+    background: #102027;
+    color: #fff;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
