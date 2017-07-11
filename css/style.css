@@ -1,0 +1,62 @@
+nav a.button-collapse {
+	display: initial;
+}
+.btn-sound {
+	width: 100%;
+	padding: 0 5px;
+	line-height: 24px;
+	height: 58px;
+	text-transform: none;
+}
+.fixed-action-btn {
+	z-index: 997;
+}
+.padding-top {
+	padding-top: 10px !important;
+}
+
+nav .nav-title {
+	width: 100%;
+	padding: 0 0 10px 0;
+	font-size: 14px;
+	font-weight: 200;
+}
+.side-nav .collapsible-body li a {
+	font-weight: 400;
+}
+.side-nav .collapsible-body li a.active {
+	background-color: #8bc34a;
+	color: #fff;
+}
+.loader {
+	position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9;
+    margin-top: -5px;
+    cursor: wait;
+}
+.menu-adjust {
+	padding: 0 16px !important;
+}
+.checkbox-deep-orange[type="checkbox"].filled-in:checked + label:after{
+     border: 2px solid #ff5722 ;
+     background-color: #ff5722 ;
+}
+.title {
+	font-size: 18px;
+	text-align: center;
+}
+.btn-select {
+	float: left;
+	padding-top : 5px;
+	padding-right: 5px; 
+}
+.email a {
+	padding: 0;
+}
+.email {
+	margin-left: -12px;
+}
